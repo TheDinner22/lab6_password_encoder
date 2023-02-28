@@ -33,6 +33,10 @@ def menu_input():
     return user_input
 
 def main():
+    # var to store the encoded password in once the user inputs it
+    # it starts as None and then becomes a string
+    encoded_password = None
+
     # main loop
     while True:
         # print the menu
@@ -43,6 +47,14 @@ def main():
 
         # encode
         if user_choice == 1:
+            # get the password from the user
+            raw_password = input("Please enter your password to encode: ")
+
+            # encode the password and store it
+            encoded_password = encode_password(raw_password)
+
+            # print message
+            print("Your password has been encoded and stored!")
             pass
 
         # decode
