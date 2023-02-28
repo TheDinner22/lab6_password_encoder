@@ -10,7 +10,6 @@ def error(msg):
 
 # prints the menu plus whitespace, nothing returned
 def print_menu():
-    print("")
     print("Menu")
     print("-------------")
     print("1. Encode")
@@ -34,7 +33,31 @@ def menu_input():
     return user_input
 
 def main():
-    pass
+    # main loop
+    while True:
+        # print the menu
+        print_menu()
+        
+        # get the user input
+        user_choice = menu_input()
+
+        # encode
+        if user_choice == 1:
+            pass
+
+        # decode
+        elif user_choice == 2:
+            pass
+
+        # quit
+        elif user_choice == 3:
+            return # break would work too
+
+        else:
+            # the program would have crashed if
+            # the input were not 1, 2, or 3
+            error("unreachable!")
+
 
 if __name__ == "__main__":
     main()
