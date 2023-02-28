@@ -2,6 +2,16 @@
 # 02/28/23
 # encode passwords and then decode them
 
+# all you have to do is write this function's body.
+# Just make sure you return a string and it
+# will work with the main funciton.
+# password is a string
+#
+# rn, it just returns a bunch of 1's
+# so that the program runs without errors
+def decode(password):
+    return "1111111111"
+
 # crash the program with a custom error message
 # msg is a string
 # this function returns nothing and will crash the program
@@ -55,15 +65,24 @@ def main():
 
             # print message
             print("Your password has been encoded and stored!")
-            pass
+            print("") # here for formatting
 
         # decode
         elif user_choice == 2:
-            pass
+            # i am assuming that this will never be called before a password is passed in
+            # if that happens, the program crashes
+            if encoded_password == None:
+                error("cannot decode password: there is no password!")
+
+            # decode the password
+            decoded_password = decode(encoded_password)
+            
+            # print the message
+            print(f"The encoded password is {encoded_password}, and the original password is {decoded_password}.")
 
         # quit
         elif user_choice == 3:
-            return # break would work too
+            return # break would work here too
 
         else:
             # the program would have crashed if
