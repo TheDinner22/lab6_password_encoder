@@ -10,7 +10,12 @@
 # rn, it just returns a bunch of 1's
 # so that the program runs without errors
 def decode(password):
-    return "1111111111"
+    decoded = ''
+    for char in password:
+        decoded += str(int(char) - 3)
+    return decoded
+
+
 
 # crash the program with a custom error message
 # msg is a string
