@@ -12,7 +12,14 @@
 def decode(password):
     decoded = ''
     for char in password:
-        decoded += str(int(char) - 3)
+        if char == '2':
+            decoded += '9'
+        elif char == '1':
+            decoded += '8'
+        elif char == '0':
+            decoded += '7'
+        else:
+            decoded += str(int(char) - 3)
     return decoded
 
 
